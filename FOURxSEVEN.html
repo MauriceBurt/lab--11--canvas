@@ -1,0 +1,35 @@
+<html>
+<head>
+<title></title>
+</head>
+<body onload="draw()">
+<canvas id= "sketch" width= "1000" height ="1000">
+</canvas>
+<script>
+function draw() {
+	var sketch = document.getElementById( 'sketch');
+	
+	var context = sketch.getContext("2d");
+	
+	for (i = 1; i<= 7 ; i= i + 1) {
+		
+		for (m = 1; m <= 4; m = m +1){
+	
+	//context.fillRect(10 + m * 20, 10 + i * 30, 30, 30);
+	// the top row was from five.html. it was made for squares. used this formula to make circles 
+
+		context.fillStyle = "#990000"
+			
+			context.beginPath();
+			
+			context.arc(50 * m, 50 * i, 10, 0, 2 * Math.PI, 2 * Math.PI, true);
+			
+			context.fill();
+			}
+
+		}
+
+}
+</script>
+</body>
+</html>
