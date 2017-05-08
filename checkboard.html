@@ -1,0 +1,45 @@
+<html>
+<head>
+<title></title>
+</head>
+<body onload="draw()">
+<canvas id= "sketch" width= "1000" height ="1000">
+</canvas>
+<script>
+function draw() {
+	var sketch = document.getElementById( 'sketch');
+	
+	var context = sketch.getContext("2d");
+
+var xSplitScreen = 800 / 8;
+
+var ySplitScreen =800 / 8;
+
+var sketch = document.getElementById('sketch');
+
+var context = sketch.getContext("2d");
+
+var blacwhite = 1;
+for(var i = 0; i < 8; i++){
+	if(blacwhite == 1){
+		blacwhite = 0;
+	}else{
+		blacwhite = 1;
+	}
+	for(var j = 0; j <8; j ++){
+
+		if(blacwhite == 1){
+			context.fillStyle = "#ffffff";
+			blacwhite = 0;
+		}else{
+			context.fillStyle = "#000000";
+			blacwhite = 1;
+		}
+		context.fillRect((i * xSplitScreen) ,(j * ySplitScreen) ,100, 100)
+		}
+	}
+}			
+
+</script>
+</body>
+</html>
